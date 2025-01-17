@@ -4,3 +4,5 @@ Hier habe ich auch Tests implementiert, um sicherzustellen, dass das Programm gu
 Zum Beispiel habe ich einen Test für das Dividieren durch Null gemacht, um eine Ausnahme (Throw Exception) zu machen. 
 Für die anderen habe ich 2 Tests für jeden Befehl geschrieben, einen "AssertEquals", der das richtige Ergebnis haben sollte, 
 und einen "AssertNotEquals, der ein falsches Ergebnis enthält.
+
+[![Java CI](https://github.com/BesjonaSpahija/SEW-Continuous-Integration/actions/workflows/cl.yml/badge.svg)](https://github.com/BesjonaSpahija/SEW-Continuous-Integration/actions/workflows/cl.yml)
