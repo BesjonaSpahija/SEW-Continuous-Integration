@@ -24,4 +24,12 @@ public class Calculator {
         }
         return Math.sqrt(a);
     }
+
+    public double squareNumber(double a) {
+        if (Double.isNaN(a)) {
+            throw new IllegalArgumentException("Input is not a valid number");
+        }
+        return Math.pow(a, 2);
+    }
+
 }
