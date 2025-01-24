@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>Testing</artifactId>
-    <version>0.3.1</version>
+    <version>0.4.1</version>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
