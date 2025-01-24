@@ -41,4 +41,11 @@ class CalculatorTest {
     void divideByZero(){
         assertThrows(ArithmeticException.class, () -> calculator.divide(3, 0));
     }
+
+    @Test
+    void squareRoot() {
+        assertEquals(4.0, calculator.squareRoot(16.0));
+        assertNotEquals(5.0, calculator.squareRoot(16.0));
+        assertEquals(0.0, calculator.squareRoot(0.0));
+    }
 }
