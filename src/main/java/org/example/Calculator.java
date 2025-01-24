@@ -44,4 +44,11 @@ public class Calculator {
         return new double[]{sinValue, cosValue}; // Return sin and cos in an array
     }
 
+    public static String convertToBinary(int number) {
+        if (number < 0) {
+            throw new IllegalArgumentException("Input must be a natural number (>= 0)");
+        }
+        return Integer.toBinaryString(number); // Converts the number to binary string
+    }
+
 }

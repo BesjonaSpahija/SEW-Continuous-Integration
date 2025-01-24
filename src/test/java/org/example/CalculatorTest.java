@@ -1,6 +1,7 @@
 package org.example;
 
 import static org.example.Calculator.calculateSinCos;
+import static org.example.Calculator.convertToBinary;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -71,6 +72,18 @@ class CalculatorTest {
     @Test
     void testInvalidInput() {
         assertThrows(IllegalArgumentException.class, () -> calculateSinCos(Double.NaN), "Input is not a valid number");
+    }
+
+    @Test
+    void testConvertToBinary() {
+        // Test for positive numbers
+        assertEquals("0", convertToBinary(0));
+        assertEquals("1", convertToBinary(1));
+        assertEquals("1010", convertToBinary(10));
+        assertEquals("11001", convertToBinary(25));
+
+        // Test for larger numbers
+        assertEquals("11111111", convertToBinary(255));
     }
 }
 
