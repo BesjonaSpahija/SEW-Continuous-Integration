@@ -20,7 +20,7 @@ public class Calculator {
     }
     public double squareRoot(double a) {
         if (a < 0) {
-            thrownewIllegalArgumentException("Square root of negative numbers is not allowed");
+            throw new IllegalArgumentException("Square root of negative numbers is not allowed");
         }
         return Math.sqrt(a);
     }
