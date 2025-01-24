@@ -32,4 +32,16 @@ public class Calculator {
         return Math.pow(a, 2);
     }
 
+    public static double[] calculateSinCos(double angle) {
+        if (Double.isNaN(angle)) {
+            throw new IllegalArgumentException("Input is not a valid number");
+        }
+
+        double radians = Math.toRadians(angle); // Convert angle to radians
+        double sinValue = Math.sin(radians);
+        double cosValue = Math.cos(radians);
+
+        return new double[]{sinValue, cosValue}; // Return sin and cos in an array
+    }
+
 }

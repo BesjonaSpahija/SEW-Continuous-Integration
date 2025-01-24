@@ -1,5 +1,6 @@
 package org.example;
 
+import static org.example.Calculator.calculateSinCos;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -54,6 +55,22 @@ class CalculatorTest {
         assertEquals(25.0, calculator.squareNumber(5.0));
         assertEquals(0.0, calculator.squareNumber(0.0));
         assertEquals(9.0, calculator.squareNumber(-3.0));
+    }
+
+    @Test
+    void testCalculateSinCos() {
+        double[] result = calculateSinCos(0.0);
+        assertEquals(0.0, result[0], 0.0001);
+        assertEquals(1.0, result[1], 0.0001);
+        result = calculateSinCos(90.0);
+        assertEquals(1.0, result[0], 0.0001);
+        assertEquals(0.0, result[1], 0.0001);
+
+    }
+
+    @Test
+    void testInvalidInput() {
+        assertThrows(IllegalArgumentException.class, () -> calculateSinCos(Double.NaN), "Input is not a valid number");
     }
 }
 
