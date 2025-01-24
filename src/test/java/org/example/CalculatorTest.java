@@ -48,4 +48,12 @@ class CalculatorTest {
         assertNotEquals(5.0, calculator.squareRoot(16.0));
         assertEquals(0.0, calculator.squareRoot(0.0));
     }
+
+    @Test
+    void squareNumber() {
+        assertEquals(25.0, calculator.squareNumber(5.0));
+        assertEquals(0.0, calculator.squareNumber(0.0));
+        assertEquals(9.0, calculator.squareNumber(-3.0));
+    }
 }
+
